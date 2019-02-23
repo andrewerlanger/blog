@@ -4,13 +4,14 @@
 <html>
   <head>
     <title>Django Blog</title>
+    <!--css step two -->
+    <link href="{% static 'css/base.css' %}" rel="stylesheet">
   </head>
   <body>
     <header>
       <h1><a href="{% url 'home' %}">Django Blog</a></h1>
+      <a href="{% url 'post_new' %}">+ New Post</a>
 
-      <!--css step two -->
-      <link href="{% static 'css/base.css' %}" rel="stylesheet">
     </header>
     <div>
       {% block content %}

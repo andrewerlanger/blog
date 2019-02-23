@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  <h2>New Blog Post</h2>
+
+  <form action="" method="POST">
+
+    <!-- this protects us from cross-site scripting attacks -->
+    {% csrf_token %}
+
+    <!-- this outputs our form fields as paragraphs (as_p)) -->
+    {{ form.as_p }}
+    <input type="submit" value="Save">
+  </form>
+
+{% endblock content %}
